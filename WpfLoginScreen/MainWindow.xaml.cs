@@ -74,7 +74,7 @@ namespace WpfLoginScreen
 
         }
 
-        private void MulButton_Click(object sender, RoutedEventArgs e)
+        private void Operator_Click(object sender, RoutedEventArgs e)
         {
             if(Operator==null)
             {
@@ -95,38 +95,9 @@ namespace WpfLoginScreen
 
         }
 
-        private void SubButton_Click(object sender, RoutedEventArgs e)
-        {
-            if (Operator == null)
-            {
-                Button btn = (Button)sender;
-                string a = btn.Content.ToString();
-                Operator = Char.Parse(a);
-                OnPropertyChanged("NumberOne");
-                OnPropertyChanged("NumberTwo");
-                Result = NumberOne.ToString() + Operator + NumberTwo.ToString();
-                OnPropertyChanged("Result");
+        
 
-                Num = null;
-            }
-
-
-        }
-
-        private void AddButton_Click(object sender, RoutedEventArgs e)
-        {
-            if (Operator == null)
-            {
-                Button btn = (Button)sender;
-                string a = btn.Content.ToString();
-                Operator = Char.Parse(a);
-                OnPropertyChanged("NumberOne");
-                OnPropertyChanged("NumberTwo");
-                Result = NumberOne.ToString() + Operator + NumberTwo.ToString();
-                OnPropertyChanged("Result");
-                Num = null;
-            }
-        }
+        
 
         private void Equals_Click(object sender, RoutedEventArgs e)
         {
@@ -163,20 +134,6 @@ namespace WpfLoginScreen
             OnPropertyChanged("NumberOne");
             OnPropertyChanged("NumberTwo");
             OnPropertyChanged("Result");
-        }
-        private void DivideButton_Click(object sender, RoutedEventArgs e)
-        {
-            if (Operator == null)
-            {
-                Button btn = (Button)sender;
-                string a = btn.Content.ToString();
-                Operator = Char.Parse(a);
-                OnPropertyChanged("NumberOne");
-                OnPropertyChanged("NumberTwo");
-                Result = NumberOne.ToString() + Operator + NumberTwo.ToString();
-                OnPropertyChanged("Result");
-                Num = null;
-            }
         }
 
         private void Clear_Click(object sender, RoutedEventArgs e)
